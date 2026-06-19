@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
+  output: "export",
+  images: {
+    unoptimized: true,
   },
-  reactStrictMode: false,
+  // Replace "philhealth-redesign" with your actual GitHub repo name
+  basePath: process.env.NODE_ENV === "production" ? "/philhealth-redesign" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "/philhealth-redesign/" : "",
 };
 
 export default nextConfig;

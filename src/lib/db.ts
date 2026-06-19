@@ -1,13 +1,3 @@
-import { PrismaClient } from '@prisma/client'
-
-const globalForPrisma = globalThis as unknown as {
-  prisma: PrismaClient | undefined
-}
-
-export const db =
-  globalForPrisma.prisma ??
-  new PrismaClient({
-    log: ['query'],
-  })
-
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = db
+// Prisma is disabled for GitHub Pages deployment
+// All data is mock data in philhealth-data.ts
+export const db = null;
