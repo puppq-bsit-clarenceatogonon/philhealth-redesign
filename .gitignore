@@ -53,3 +53,7 @@ server.log
 # Skills directory
 /skills/
 .vercel
+
+# Database (not needed for GitHub Pages)
+prisma/
+db/
