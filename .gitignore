@@ -57,3 +57,6 @@ server.log
 # Database (not needed for GitHub Pages)
 prisma/
 db/
+
+# Demo/example files not needed for deployment
+examples/
